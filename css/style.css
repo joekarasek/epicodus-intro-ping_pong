@@ -7,6 +7,14 @@ h1 {
 
 .aboutSection {
   background-color: #80C18C;
+  height: 500px;
+  padding-left: 25px;
+}
+.aboutSection>h4 {
+  color:#FFDCA3;
+}
+.aboutSection>p {
+  color:white;
 }
 
 .main {
