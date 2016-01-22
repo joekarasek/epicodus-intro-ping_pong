@@ -3,6 +3,11 @@
 //++++++++++++++++++++++++++++++++
 
 var toPingPong = function(inputNumber) {
+  // This part catches inputs that are not numbers
+  if (typeof inputNumber !== "number") {
+    return false;
+  }
+  // This part returns ping and pong
   if (inputNumber % 15 === 0) {
     return "pingpong";
   } else if (inputNumber % 5 === 0) {
