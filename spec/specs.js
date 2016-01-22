@@ -11,4 +11,7 @@ describe('toPingPong', function() {
   it('it will return the string "pingpong" if input is divisble by both 3 and 5', function() {
     expect(toPingPong(15)).to.equal('pingpong');
   });
+  it('it will return false if input is not a number', function() {
+    expect(toPingPong("hello")).to.equal(false);
+  });
 });
