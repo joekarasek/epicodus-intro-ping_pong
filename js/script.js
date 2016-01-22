@@ -24,18 +24,20 @@ var toPingPong = function(inputNumber) {
 //++++++++++++++++++++++++++++++++
 
 $(document).ready(function() {
-  // prevents default behavior
-  event.preventDefault();
-  // submit event for form
+  // submit event form
   $('#pingPongForm').submit(function(event) {
     // clears result list upon subsequent submits
     $('#resultList').empty();
     //alerts user if entry does not work
-    if (!toPingPong($('#inputValue').val())) {
+    if (toPingPong(parseInt($('#inputValue').val()))===false) {
       alert("Please enter a whole, positive interger and try again.");
       return;
     }
     // populates list to display results
-
+    for(var i=1;i<=parseInt($('#inputValue').val());i++) {
+      $('#resultList').append("<li>"+toPingPong(i)+"</li>");
+    }
+    // prevents default behavior
+    event.preventDefault();
   });
 });
