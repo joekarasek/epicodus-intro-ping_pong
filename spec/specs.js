@@ -14,4 +14,7 @@ describe('toPingPong', function() {
   it('it will return false if input is not a number', function() {
     expect(toPingPong("hello")).to.equal(false);
   });
+  it('it will return false if input is not a positive interger', function() {
+    expect(toPingPong(-15)).to.equal(false);
+  });
 });
