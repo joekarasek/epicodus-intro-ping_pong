@@ -22,3 +22,20 @@ var toPingPong = function(inputNumber) {
 //++++++++++++++++++++++++++++++++
 //   "User Interface Logic"
 //++++++++++++++++++++++++++++++++
+
+$(document).ready(function() {
+  // prevents default behavior
+  event.preventDefault();
+  // submit event for form
+  $('#pingPongForm').submit(function(event) {
+    // clears result list upon subsequent submits
+    $('#resultList').empty();
+    //alerts user if entry does not work
+    if (!toPingPong($('#inputValue').val())) {
+      alert("Please enter a whole, positive interger and try again.");
+      return;
+    }
+    // populates list to display results
+
+  });
+});
