@@ -4,7 +4,7 @@
 
 var toPingPong = function(inputNumber) {
   // This part catches inputs that are not numbers
-  if (typeof inputNumber !== "number") {
+  if (typeof inputNumber !== "number" || inputNumber < -1) {
     return false;
   }
   // This part returns ping and pong
